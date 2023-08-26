@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Kufam:wght@700&family=Nunito:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h2 {
+  @apply font-kufam;
+}
+
+.airplane-list::-webkit-scrollbar {
+  display: none;
+}
+
+.airplane-list {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

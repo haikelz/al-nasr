@@ -4,7 +4,10 @@ import { Image, Paragraph } from "./ui";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1DA599] w-full flex justify-center items-center p-4">
+    <footer
+      id="footer"
+      className="bg-[#1DA599] w-full flex justify-center items-center p-4"
+    >
       <div className="flex justify-center items-center flex-col w-full max-w-7xl">
         <div className="flex md:space-x-12 flex-col md:flex-row py-16 justify-between items-start w-full">
           <div className="md:w-[294px] w-full">

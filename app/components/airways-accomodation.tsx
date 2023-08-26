@@ -37,7 +37,7 @@ export default function AirwaysAccomodation() {
         <div
           className={tw(
             "md:w-[400px] w-full flex",
-            "md:justify-start justify-center items-center",
+            "md:justify-start justify-start items-start",
             "md:items-start space-y-4 flex-col"
           )}
         >
@@ -54,14 +54,10 @@ export default function AirwaysAccomodation() {
                 alt="star"
                 className="w-[20px] h-[20px]"
               />
-              <div className="flex justify-center items-center space-x-2">
-                <span className="text-[#1DA599] font-medium text-xl font-nunito">
-                  5.0
-                </span>
-                <span className="text-[#1DA599] font-medium text-xl font-nunito">
-                  Rating
-                </span>
-              </div>
+
+              <span className="text-[#1DA599] font-medium text-xl font-nunito">
+                5.0 Rating
+              </span>
             </div>
           </div>
         </div>

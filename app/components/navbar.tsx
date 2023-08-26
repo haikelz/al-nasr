@@ -6,27 +6,27 @@ const linkList = [
   {
     id: 1,
     name: "Home",
-    route: "/",
+    route: "",
   },
   {
     id: 2,
     name: "About Us",
-    route: "/about-us",
+    route: "about-us",
   },
   {
     id: 3,
-    name: "Package",
-    route: "/packages",
+    name: "Packages",
+    route: "packages",
   },
   {
     id: 4,
     name: "Facilities",
-    route: "/facilities",
+    route: "facilities",
   },
   {
     id: 5,
     name: "Gallery",
-    route: "/gallery",
+    route: "gallery",
   },
 ];
 
@@ -34,68 +34,85 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <header className="w-full flex justify-center items-center flex-col p-4">
-      <nav className="w-full max-w-7xl flex justify-between items-center">
+    <header className="w-full flex justify-center items-center flex-col">
+      <nav className="w-full max-w-7xl flex p-4 justify-between items-center">
         <div>
           <Image src="/assets/logo.svg" width={143} height={68} alt="logo" />
         </div>
         <ul className="md:flex space-x-8 hidden">
           {linkList.map((item) => (
             <li key={item.id}>
-              <Link to={item.route}>{item.name}</Link>
+              <a href={`#${item.route}`}>{item.name}</a>
             </li>
           ))}
         </ul>
-        <button
-          type="button"
-          aria-label="open nav"
-          onClick={() => setIsOpen(true)}
-          className="block md:hidden"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="w-6 h-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
-          </svg>
-        </button>
         {isOpen ? (
-          <div className="bg-white fixed block md:hidden inset-0 p-4">
-            <p>Mantap dan luar biasa</p>
-            <button
-              type="button"
-              aria-label="close nav"
-              onClick={() => setIsOpen(false)}
+          <button
+            type="button"
+            aria-label="close nav"
+            onClick={() => setIsOpen(false)}
+            className="block md:hidden"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-6 h-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-          </div>
-        ) : null}
-        <Button variant="primary" type="button" aria-label="contact us">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        ) : (
+          <button
+            type="button"
+            aria-label="open nav"
+            onClick={() => setIsOpen(true)}
+            className="block md:hidden"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+        )}
+        <Button
+          className="hidden md:block"
+          variant="primary"
+          type="button"
+          aria-label="contact us"
+        >
           Contact Us
         </Button>
       </nav>
+      {isOpen ? (
+        <div className="bg-white sticky top-24 block md:hidden w-full rounded-md p-4">
+          <ul className="space-y-3">
+            {linkList.map((item) => (
+              <li key={item.id}>
+                <a className="font-semibold" href={`#${item.route}`}>
+                  {item.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
     </header>
   );
 }

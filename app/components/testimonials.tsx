@@ -5,6 +5,7 @@ import {
 } from "~/lib/utils/data";
 import { Layout } from "./layout";
 import { Button, Heading, Image, Paragraph } from "./ui";
+import Marquee from "react-fast-marquee";
 
 export default function Testimonials() {
   return (
@@ -36,13 +37,18 @@ export default function Testimonials() {
           </div>
         </div>
         <div className="my-10 w-full space-y-10 flex flex-col justify-center items-center overflow-hidden">
-          <div className="flex justify-center animate-marquee-one w-full items-center space-x-10">
+          <Marquee
+            speed={100}
+            pauseOnClick
+            loop={0}
+            className="flex justify-center w-full p-1 items-center"
+          >
             {testimonialsSectionOne.map((item) => (
               <div
                 key={item.id}
                 className={tw(
                   "drop-shadow-lg p-4 flex",
-                  "justify-center items-center bg-white rounded-lg"
+                  "justify-center items-center bg-white rounded-lg mr-10"
                 )}
               >
                 <div className="flex space-x-4 w-full justify-between items-start">
@@ -50,7 +56,7 @@ export default function Testimonials() {
                     <Image src={`/assets/${item.image}`} alt={item.alt} />
                     <div
                       className={tw(
-                        "bg-[#C1FFFA] mt-3 w-fit rounded-full px-4 py-2",
+                        "bg-[#C1FFFA] mt-3 w-fit rounded-full px-3 py-1",
                         "flex justify-center items-center space-x-3"
                       )}
                     >
@@ -59,7 +65,7 @@ export default function Testimonials() {
                         alt="star"
                         src="/assets/star.svg"
                       />
-                      <span className="font-semibold text-[10px] font-nunito text-[#1DA599]">
+                      <span className="font-semibold text-sm font-nunito text-[#1DA599]">
                         {item.star}
                       </span>
                     </div>
@@ -80,13 +86,19 @@ export default function Testimonials() {
                 </div>
               </div>
             ))}
-          </div>
-          <div className="flex w-full justify-center animate-marquee-two space-x-10 items-center">
+          </Marquee>
+          <Marquee
+            direction="right"
+            speed={100}
+            pauseOnClick
+            loop={0}
+            className="flex w-full justify-center p-1 items-center"
+          >
             {testimonialsSectionTwo.map((item) => (
               <div
                 key={item.id}
                 className={tw(
-                  "drop-shadow-lg p-4 flex w-[476px]",
+                  "drop-shadow-lg p-4 mr-10 flex w-[476px]",
                   "justify-center items-center bg-white rounded-lg"
                 )}
               >
@@ -95,7 +107,7 @@ export default function Testimonials() {
                     <Image src={`/assets/${item.image}`} alt={item.alt} />
                     <div
                       className={tw(
-                        "bg-[#C1FFFA] mt-3 w-fit rounded-full px-4 py-2",
+                        "bg-[#C1FFFA] mt-3 w-fit rounded-full px-3 py-1",
                         "flex justify-center items-center space-x-3"
                       )}
                     >
@@ -104,7 +116,7 @@ export default function Testimonials() {
                         alt="star"
                         src="/assets/star.svg"
                       />
-                      <span className="font-semibold text-[10px] font-nunito text-[#1DA599]">
+                      <span className="font-semibold text-sm font-nunito text-[#1DA599]">
                         {item.star}
                       </span>
                     </div>
@@ -125,7 +137,7 @@ export default function Testimonials() {
                 </div>
               </div>
             ))}
-          </div>
+          </Marquee>
         </div>
         <div className="w-full flex justify-end items-center">
           <Button

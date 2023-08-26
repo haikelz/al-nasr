@@ -28,10 +28,13 @@ const benefitsList = [
 export default function About() {
   return (
     <Layout className="py-20">
-      <div className="flex flex-col md:flex-row justify-center md:space-x-14 items-start">
+      <div
+        id="about-us"
+        className="flex flex-col md:flex-row justify-center md:space-x-14 items-start"
+      >
         <Image width={506} height={591} src="/assets/about.png" alt="about" />
         <div className="mt-7">
-          <div className="">
+          <div>
             <Heading>A Wonderful Agency To Fulfill your Dreams</Heading>
             <Paragraph>
               The Hajj and Umrah pilgrimages are smooth, the heart is clean. we

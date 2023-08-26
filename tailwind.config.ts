@@ -9,19 +9,17 @@ export default {
         nunito: ["Nunito", "sans-serif"],
       },
       animation: {
-        "marquee-one": "marquee-one 20s linear infinite",
-        "marquee-two": "marquee-two 20s linear infinite",
+        "marquee-one": "marquee-one 10s linear infinite",
+        "marquee-two": "marquee-two 10s linear infinite",
       },
       keyframes: {
         "marquee-one": {
-          "0%": { transform: "translateX(-100%)" },
-          "50%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(100%)" },
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
         },
         "marquee-two": {
-          "0%": { transform: "translateX(100%)" },
-          "50%": { tranform: "translateX(0%)" },
-          "100%": { transform: "translateX(-100%)" },
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
         },
       },
     },

@@ -6,7 +6,10 @@ import { Button, Heading, Image, Paragraph } from "./ui";
 export default function Packages() {
   return (
     <Layout className="md:pt-20 pb-20">
-      <div className="flex flex-col justify-center w-full items-center">
+      <div
+        id="packages"
+        className="flex flex-col justify-center w-full items-center"
+      >
         <div className="text-start md:text-center w-full md:w-[821px] md:h-[234px]">
           <Heading>Al Nasr Special Umrah and Hajj Packages</Heading>
           <Paragraph>

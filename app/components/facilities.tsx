@@ -65,7 +65,10 @@ const facilitiesList = [
 export default function Facilities() {
   return (
     <Layout className="bg-[#F3FFFE] py-10 md:py-20">
-      <div className="flex justify-center items-center w-full flex-col">
+      <div
+        id="facilities"
+        className="flex justify-center items-center w-full flex-col"
+      >
         <div className="text-start md:text-center flex flex-col justify-center items-center">
           <Heading>Facilities We Provide For You</Heading>
           <Paragraph className="md:w-[660px] w-full">

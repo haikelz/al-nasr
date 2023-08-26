@@ -27,7 +27,10 @@ const footagesList = [
 export default function Gallery() {
   return (
     <Layout className="bg-[#F3FFFE] pt-10 md:pt-20 pb-20">
-      <div className="flex justify-center w-full items-center flex-col text-start md:text-center">
+      <div
+        id="gallery"
+        className="flex justify-center w-full items-center flex-col text-start md:text-center"
+      >
         <Heading>Gallery Footage In Saudi Arabia</Heading>
         <Paragraph>
           We provide comfort for our customers, with the various facilities we

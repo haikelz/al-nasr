@@ -1,34 +1,6 @@
-import { Link } from "@remix-run/react";
 import { useState } from "react";
+import { linkList } from "~/lib/utils/data";
 import { Button, Image } from "./ui";
-
-const linkList = [
-  {
-    id: 1,
-    name: "Home",
-    route: "",
-  },
-  {
-    id: 2,
-    name: "About Us",
-    route: "about-us",
-  },
-  {
-    id: 3,
-    name: "Packages",
-    route: "packages",
-  },
-  {
-    id: 4,
-    name: "Facilities",
-    route: "facilities",
-  },
-  {
-    id: 5,
-    name: "Gallery",
-    route: "gallery",
-  },
-];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);

@@ -5,7 +5,6 @@ import {
 } from "~/lib/utils/data";
 import { Layout } from "./layout";
 import { Button, Heading, Image, Paragraph } from "./ui";
-import Marquee from "react-fast-marquee";
 
 export default function Testimonials() {
   return (
@@ -37,12 +36,7 @@ export default function Testimonials() {
           </div>
         </div>
         <div className="my-10 w-full space-y-10 flex flex-col justify-center items-center overflow-hidden">
-          <Marquee
-            speed={100}
-            pauseOnClick
-            loop={0}
-            className="flex justify-center w-full p-1 items-center"
-          >
+          <div className="flex justify-center animate-marquee-two w-full p-1 items-center">
             {testimonialsSectionOne.map((item) => (
               <div
                 key={item.id}
@@ -86,14 +80,8 @@ export default function Testimonials() {
                 </div>
               </div>
             ))}
-          </Marquee>
-          <Marquee
-            direction="right"
-            speed={100}
-            pauseOnClick
-            loop={0}
-            className="flex w-full justify-center p-1 items-center"
-          >
+          </div>
+          <div className="flex w-full animate-marquee-one justify-center p-1 items-center">
             {testimonialsSectionTwo.map((item) => (
               <div
                 key={item.id}
@@ -137,7 +125,7 @@ export default function Testimonials() {
                 </div>
               </div>
             ))}
-          </Marquee>
+          </div>
         </div>
         <div className="w-full flex justify-end items-center">
           <Button

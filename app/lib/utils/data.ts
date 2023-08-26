@@ -138,15 +138,6 @@ export const testimonialsSectionOne = [
 export const testimonialsSectionTwo = [
   {
     id: 1,
-    name: "Humaira Khaira",
-    review: review,
-    label: "Al Nasr Umrah",
-    image: "humaira-khaira.png",
-    alt: "humaira khaira",
-    star: 4.9,
-  },
-  {
-    id: 2,
     name: "Ray Gunawan",
     review: review,
     label: "Al Nasr Hajj Platinum",
@@ -155,7 +146,7 @@ export const testimonialsSectionTwo = [
     star: 4.9,
   },
   {
-    id: 3,
+    id: 2,
     name: "Indra Pratama",
     review: review,
     label: "Al Nasr Hajj Platinum",
@@ -164,7 +155,7 @@ export const testimonialsSectionTwo = [
     star: 4.9,
   },
   {
-    id: 4,
+    id: 3,
     name: "Abd Al Jami'ah",
     review: review,
     label: "Al Nasr Umrah",
@@ -194,5 +185,139 @@ export const socialMediaList = [
     id: 4,
     src: "/youtube.svg",
     alt: "youtube",
+  },
+];
+
+export const airwaysList = [
+  {
+    id: 1,
+    src: "garuda-indonesia.png",
+    alt: "garuda indonesia",
+  },
+  {
+    id: 2,
+    src: "qatar-airways.png",
+    alt: "qatar airways",
+  },
+  {
+    id: 3,
+    src: "fly-emirates.png",
+    alt: "fly emirates",
+  },
+  {
+    id: 4,
+    src: "saudi-arabia.png",
+    alt: "saudi arabia",
+  },
+];
+
+export const facilitiesList = [
+  {
+    id: 1,
+    title: "Safety & Security",
+    description: "We take care of your security in 24 hours",
+    icon: "safety.svg",
+    alt: "safety",
+  },
+
+  {
+    id: 2,
+    title: "Conseling",
+    description: "Provide counseling to stay fit spiritually and religius",
+    icon: "conseling.svg",
+    alt: "conseling",
+  },
+  {
+    id: 3,
+    title: "Vehicle in Saudi",
+    description: "Bus and Car Vehicles While in Saudi",
+    icon: "bus.svg",
+    alt: "vehicle",
+  },
+  {
+    id: 4,
+    title: "Health in Saudi",
+    description: "Free Health Facilities for every customer",
+    icon: "health.svg",
+    alt: "health",
+  },
+  {
+    id: 5,
+    title: "Hotel Rate 5",
+    description: "5 star hotel accommodation every customer",
+    icon: "bedroom.svg",
+    alt: "bedroom",
+  },
+  {
+    id: 6,
+    title: "Food & Drink",
+    description: "Provide food and drinks while in Saudi",
+    icon: "food.svg",
+    alt: "food",
+  },
+  {
+    id: 7,
+    title: "Membership",
+    description: "Obtain a membership card for each customer",
+    icon: "membership.svg",
+    alt: "membership",
+  },
+  {
+    id: 8,
+    title: "Vaccine",
+    description: "Free meningitis vaccine for all customers",
+    icon: "vaccine.svg",
+    alt: "vaccine",
+  },
+];
+
+export const footagesList = [
+  {
+    id: 2,
+    src: "/assets/footage-2.png",
+    alt: "footage 2",
+  },
+  {
+    id: 3,
+    src: "/assets/footage-3.png",
+    alt: "footage 3",
+  },
+  {
+    id: 4,
+    src: "/assets/footage-4.png",
+    alt: "footage 4",
+  },
+  {
+    id: 5,
+    src: "/assets/footage-5.png",
+    alt: "footage 5",
+  },
+];
+
+export const linkList = [
+  {
+    id: 1,
+    name: "Home",
+    route: "",
+  },
+  {
+    id: 2,
+    name: "About Us",
+    route: "about-us",
+  },
+  {
+    id: 3,
+    name: "Packages",
+    route: "packages",
+  },
+  {
+    id: 4,
+    name: "Facilities",
+    route: "facilities",
+  },
+  {
+    id: 5,
+    name: "Gallery",
+    route: "gallery",
   },
 ];

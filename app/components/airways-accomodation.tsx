@@ -1,29 +1,7 @@
 import { tw } from "~/lib/helpers";
+import { airwaysList } from "~/lib/utils/data";
 import { Layout } from "./layout";
 import { Heading, Image, Paragraph } from "./ui";
-
-const airwaysList = [
-  {
-    id: 1,
-    src: "garuda-indonesia.png",
-    alt: "garuda indonesia",
-  },
-  {
-    id: 2,
-    src: "qatar-airways.png",
-    alt: "qatar airways",
-  },
-  {
-    id: 3,
-    src: "fly-emirates.png",
-    alt: "fly emirates",
-  },
-  {
-    id: 4,
-    src: "saudi-arabia.png",
-    alt: "saudi arabia",
-  },
-];
 
 export default function AirwaysAccomodation() {
   return (

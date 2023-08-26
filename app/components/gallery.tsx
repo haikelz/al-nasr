@@ -1,28 +1,6 @@
+import { footagesList } from "~/lib/utils/data";
 import { Layout } from "./layout";
 import { Heading, Image, Paragraph } from "./ui";
-
-const footagesList = [
-  {
-    id: 2,
-    src: "/assets/footage-2.png",
-    alt: "footage 2",
-  },
-  {
-    id: 3,
-    src: "/assets/footage-3.png",
-    alt: "footage 3",
-  },
-  {
-    id: 4,
-    src: "/assets/footage-4.png",
-    alt: "footage 4",
-  },
-  {
-    id: 5,
-    src: "/assets/footage-5.png",
-    alt: "footage 5",
-  },
-];
 
 export default function Gallery() {
   return (

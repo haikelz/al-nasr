@@ -24,7 +24,7 @@ export default function Packages() {
             "grid-rows-1 mt-20 gap-14"
           )}
         >
-          {packagesList.map((item, index) => (
+          {packagesList.map((item) => (
             <div key={item.id} className="rounded-lg bg-white drop-shadow-lg">
               <div className="p-6">
                 <Image

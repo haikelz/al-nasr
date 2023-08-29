@@ -1,15 +1,12 @@
-import {
-  LazyLoadImage,
-  LazyLoadImageProps,
-} from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
+import { ImgHTMLAttributes } from "react";
 import { tw } from "~/lib/helpers";
 
-type ImageProps = LazyLoadImageProps;
+type ImageProps = ImgHTMLAttributes<HTMLImageElement>;
 
 export function Image({ className, src, alt }: ImageProps) {
   return (
-    <LazyLoadImage
+    <img
+      loading="lazy"
       className={tw("aspect-auto w-full transition-all", className)}
       src={src}
       alt={alt}

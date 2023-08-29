@@ -32,7 +32,6 @@ export default function AirwaysAccomodation() {
                 alt="star"
                 className="w-[20px] h-[20px]"
               />
-
               <span className="text-[#1DA599] font-medium text-xl font-nunito">
                 5.0 Rating
               </span>

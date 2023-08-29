@@ -14,7 +14,12 @@ export default function Navbar() {
         <ul className="md:flex space-x-8 hidden">
           {linkList.map((item) => (
             <li key={item.id}>
-              <a href={`#${item.route}`}>{item.name}</a>
+              <a
+                className="transition-all hover:text-[#FFC265]"
+                href={`#${item.route}`}
+              >
+                {item.name}
+              </a>
             </li>
           ))}
         </ul>

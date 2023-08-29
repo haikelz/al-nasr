@@ -1,6 +1,7 @@
 import { tw } from "~/lib/helpers";
 import { menusFooterList, socialMediaList } from "~/lib/utils/data";
 import { Image, Paragraph } from "./ui";
+import { Link } from "@remix-run/react";
 
 export default function Footer() {
   return (
@@ -59,14 +60,21 @@ export default function Footer() {
           </Paragraph>
           <div className="flex justify-center mt-7 md:mt-0 items-center space-x-3">
             {socialMediaList.map((item) => (
-              <button
+              <Link
                 key={item.id}
-                type="button"
-                aria-label={item.alt}
-                className="bg-white rounded-lg hover:-translate-y-1 transition-all p-2 drop-shadow-md"
+                to={item.alt}
+                rel="noopener noreferrer"
+                target="_blank"
               >
-                <Image src={`/assets/${item.src}`} alt={item.alt} />
-              </button>
+                <button
+                  key={item.id}
+                  type="button"
+                  aria-label={item.alt}
+                  className="bg-white rounded-lg hover:-translate-y-1 transition-all p-2 drop-shadow-md"
+                >
+                  <Image src={`/assets/${item.src}`} alt={item.alt} />
+                </button>
+              </Link>
             ))}
           </div>
         </div>

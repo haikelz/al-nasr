@@ -169,22 +169,22 @@ export const socialMediaList = [
   {
     id: 1,
     src: "/instagram.svg",
-    alt: "instagram",
+    alt: "https://instagram.com",
   },
   {
     id: 2,
     src: "/facebook.svg",
-    alt: "facebook",
+    alt: "https://facebook.com",
   },
   {
     id: 3,
     src: "/twitter.svg",
-    alt: "twitter",
+    alt: "https://twitter.com",
   },
   {
     id: 4,
     src: "/youtube.svg",
-    alt: "youtube",
+    alt: "https://youtube.com",
   },
 ];
 

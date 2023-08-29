@@ -5,8 +5,6 @@
 
 ## Screenshots
 
-![ss 1](./public/docs/ss-1.png)
-
 ![ss 2](./public/docs/ss-2.png)
 
 ![ss 3](./public/docs/ss-3.png)
